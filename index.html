@@ -18,7 +18,7 @@
       font-weight: bold;
       text-align: center;
     }
-    .proximos {
+.proximos {
       margin-top: 30px;
     }
     .entrada {
@@ -44,7 +44,7 @@
     }
 
     function parseDataBrasileira(dataStr) {
-      if (!dataStr.includes("/")) return dataStr;
+      if (!dataStr.includes("/")) return dataStr; // assume ISO
       const [dia, mes, ano] = dataStr.split("/");
       return `${ano}-${mes.padStart(2, '0')}-${dia.padStart(2, '0')}`;
     }
@@ -95,3 +95,4 @@
   </div>
 </body>
 </html>
+
