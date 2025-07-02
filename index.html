@@ -62,7 +62,9 @@
           return { data: dataIso, dia: dia.trim(), pessoa: pessoa.trim() };
         });
 
-        const hojeStr = new Date().toISOString().split('T')[0];
+        const hojeObj = new Date();
+        
+        const hojeStr = hojeObj.toISOString().split('T')[0];
         const hojeEscala = resultados.find(e => e.data === hojeStr);
         const containerHoje = document.getElementById("hoje");
         const containerProximos = document.getElementById("proximos");
@@ -89,10 +91,17 @@
     carregarEscala();
   </script>
 
+  <div style="margin-top: 30px; text-align: center;">
+    <p><a href="https://docs.google.com/spreadsheets/d/1lOvH5gB9p_FirM3QeUgxn24KWrSYWbbqzESxSyd00_g/edit?gid=15456556" target="_blank" style="font-weight: bold; color: #007BFF; text-decoration: none;">🔗 Acessar planilha no Google Sheets</a></p>
+  </div>
+
   <div style="margin-top: 40px; text-align: center;">
     <h2>Local da Vaga</h2>
     <img src="vaga.png" alt="Local da vaga" style="max-width: 100%; height: auto; border: 1px solid #ccc;">
   </div>
+
+  <div style="margin-top: 30px; text-align: center;">
+    <p><a href="https://docs.google.com/spreadsheets/d/1lOvH5gB9p_FirM3QeUgxn24KWrSYWbbqzESxSyd00_g/edit?gid=15456556" target="_blank" style="font-weight: bold; color: #007BFF; text-decoration: none;">🔗 Acessar planilha no Google Sheets</a></p>
+  </div>
 </body>
 </html>
-
